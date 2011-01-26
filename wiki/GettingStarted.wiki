@@ -1,6 +1,6 @@
-#Processing Guide for LiDAR Tools
+#summary Processing Guide for LiDAR Tools
 
-= Introduction =
+=Processing Guide for LiDAR Tools=
 
 This page is a basic guideline to processing LiDAR data using the LiDAR Tools software package for ENVI. More detailed information on the individual steps can be found on the information pages for the respective tools.
 
