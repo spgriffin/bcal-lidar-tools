@@ -2,15 +2,15 @@
 
 =Processing Guide for LiDAR Tools=
 
-This page is a basic guideline to processing LiDAR data using the LiDAR Tools software package for ENVI. More detailed information on the individual steps can be found on the information pages for the respective tools.
+This page is a basic guideline to processing LiDAR data using the BCAL LiDAR Tools software package for ENVI. More detailed information on the individual steps can be found on the information pages for the respective tools.
 
 ==Step 1: Convert your data to the .las format (if necessary)==
 
-The LiDAR Tools package requires that all data be in the .las data format. If your data are not in this format, you will need to convert them before any processing can take place. The LiDAR Tools package contains a conversion tool for converting your data from ascii to las.
+The BCAL LiDAR Tools package requires that all data be in the .las data format. If your data are not in this format, you will need to convert them before any processing can take place. The BCAL LiDAR Tools package contains a conversion tool for converting your data from ascii to las.
 
 ==Step 2: Tile your data (if necessary)==
 
-In order to accomplish many of the functions in the LiDAR Tools package, the software must be able to read the individual files into the computer's memory. If the files are too large (or if the computer's memory is limited), they can be broken into smaller files using the tiling feature. Alternatively, large files may also be subset or decimated.
+In order to accomplish many of the functions in the BCAL LiDAR Tools package, the software must be able to read the individual files into the computer's memory. If the files are too large (or if the computer's memory is limited), they can be broken into smaller files using the tiling feature. Alternatively, large files may also be subset or decimated.
 
 ==Step 3: Explore your data==
 
