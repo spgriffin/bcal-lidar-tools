@@ -1,5 +1,5 @@
 #summary Table of Contents
 
-* [GettingStarted Processing Guide]
-* LAS Files
-  * [LASFileInfo Get Header Info]
+  * [GettingStarted Processing Guide]
+  * [LAS Files]
+    * [LASFileInfo Get Header Info]
