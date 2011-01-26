@@ -1,7 +1,7 @@
 #summary Using "Get LAS File Info"
 
 =Using "Get LAS File Info"=
-<img src="http://bcal.geology.isu.edu/envihelp/images/InfoScreen.jpg" align="left">
+<img src="http://bcal.geology.isu.edu/envihelp/images/InfoScreen.jpg" align="right">
 This tool is used to display information about an LAS file.
 
 ==Usage:==
