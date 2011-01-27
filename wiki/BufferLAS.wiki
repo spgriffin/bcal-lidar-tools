@@ -13,4 +13,6 @@ This tool is meant to buffer neighboring LAS files such that they will overlap g
 ==Notes:==
 
   * This tool requires data that are in the LAS format.
-  * This tool was developed for use with the filtering and rasterization tools, in order to overcome difficulties near tile seams. If the data files are buffered before further processing, the results should be seamless.
+  * This tool was developed for use with the [HeightFiltering filtering] and [RasterizeLAS rasterization] tools, in order to overcome difficulties near tile seams. If the data files are buffered before further processing, the results should be seamless.
+
+[http://bcal.geology.isu.edu/envihelp/images/BufferScreen.jpg]
