@@ -7,7 +7,7 @@ This page is a basic guideline to processing LiDAR data using the BCAL LiDAR Too
 
 ==Step 1: Convert your data to the .las format (if necessary)==
 
-The BCAL LiDAR Tools package requires that all data be in the .las data format. If your data are not in this format, you will need to convert them before any processing can take place. The BCAL LiDAR Tools package contains a conversion tool for converting your data from ascii to las.
+The BCAL LiDAR Tools package requires that all data be in the .las data format. If your data are not in this format, you will need to convert them before any processing can take place. The BCAL LiDAR Tools package contains a [AsciiToLAS conversion tool] for converting your data from ascii to las.
 
 ==Step 2: Tile your data (if necessary)==
 
