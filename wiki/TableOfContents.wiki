@@ -16,3 +16,4 @@
      *  [SubsetLASCoord Subset via Coordinates]
      *  [SubsetLASRoi Subset via Image/ROI]
   * [HeightFiltering Perform Height Filtering]
+  * [RasterizeLAS Rasterize Lidar Data]
