@@ -20,3 +20,5 @@ This tool is meant to convert ascii data in one or more text files to LAS format
 ==Notes:==
 
 This tool assumes that all of the input text files have the same format.
+
+[http://bcal.geology.isu.edu/envihelp/images/AsciiScreen.jpg]
