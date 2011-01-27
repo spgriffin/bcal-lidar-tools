@@ -17,7 +17,7 @@ This tool is meant to filter LiDAR data into ground and vegetation classes, and 
 ==Notes:==
 
   * This tool requires data that are in the LAS format.
-This tool was developed to filter rangeland vegetation (sagebrush, etc.) which has a fairly open canopy. It seems to work fairly well in some forestry applications, but has not been evaluated for dense canopies (i.e. rainforests). Ultimately, the effectiveness probably relies on the LiDAR point spacing more than anything else.
+  * This tool was developed to filter rangeland vegetation (sagebrush, etc.) which has a fairly open canopy. It seems to work fairly well in some forestry applications, but has not been evaluated for dense canopies (i.e. rainforests). Ultimately, the effectiveness probably relies on the LiDAR point spacing more than anything else.
   * This tool is not intended to filter buildings or other large structures.
   * The tool may not do very well calculating height values near the edges of the data files. This is due to processing files individually and the resulting lack of points near the edges.
   * For more information on the filtering algorithm, see:
