@@ -1,0 +1,7 @@
+#summary BCAL LiDAR Tools in Research
+
+= Scientific Publications =
+
+  * Streutker, D. and Glenn, N., 2006. [http://bcal.geology.isu.edu/manuscripts/Streutker_2006_RSE.pdf LiDAR measurement of sagebrush steppe vegetation heights]. Remote Sensing of Environment, 102, 135-145.
+
+  * Spaete, L., Glenn, N., Derryberry, D., Sankey, T., Mitchell, J., Hardegree, S., [http://bcal.geology.isu.edu/sites/default/files/Spaete%20et%20al%202010.pdf Vegetation and slope effects on accuracy of a LiDAR-derived DEM in the sagebrush steppe]. Remote Sensing Letters, 2 (4), 317-326.
