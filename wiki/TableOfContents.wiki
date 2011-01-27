@@ -9,3 +9,4 @@
     * [ReprojectLAS Reproject LAS]
     * [AsciiToLAS Convert Ascii to LAS]
     * [LAStoAscii Convert LAS to Ascii]
+    * [BufferLAS Buffer LAS files]
