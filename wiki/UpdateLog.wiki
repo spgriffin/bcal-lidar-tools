@@ -8,5 +8,5 @@
   * 07/19/2007 - Added [LASFileInfo file information tool], support for embedded projections, made minor tweaks and fixes
   * 03/15/2007 - Added [AsciiToLAS ascii conversion] and [ReprojectLAS reprojection] tools, made minor tweaks and fixes
   * 11/10/2006 - Added [ProfileLAS profiling] tool, made minor tweaks and fixes
-  * 08/09/2006 - Added the [3DVisualizer 3D visualization module]
+  * 08/09/2006 - Added the [3DViewer 3D visualization module]
   * 08/07/2006 - Added [BufferLAS buffering], [DecimateLAS decimation], and [TileLAS tiling] tools
