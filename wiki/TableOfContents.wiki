@@ -3,6 +3,7 @@
   * [Installation Installation Instruction]
   * [ProcessingGuide LiDAR Processing Guide]
   * [ToolsOverview Tools Overview]
+  * [ToolsUsage Publications]
   * Help
     * LAS Files
       * [LASFileInfo Get Header Info]
@@ -22,4 +23,3 @@
     * [ProfileLAS  Create Elevation Profile(s)]
     * [ExportLAS  Export Ground Points only]
     * [3DViewer 3D LiDAR Viewer]
-  * [ToolsUsage Publications]
