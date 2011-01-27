@@ -3,7 +3,7 @@
 
 =Tools Overview=
 
-|| LAS File Utilities || ||	
+|| LAS File Utilities ||	
 || [LASFileInfo Get LAS File Info] || Displays header and projection information for an LAS file ||
 || [AddProject Add Projection to LAS File(s)] || Adds embedded projection information to LAS files ||
 || [ReprojectLAS Reproject LAS File(s)] || Converts existing LAS files into a new map projection ||
