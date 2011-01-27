@@ -5,3 +5,4 @@
   * [GettingStarted Processing Guide]
   * LAS Files
     * [LASFileInfo Get Header Info]
+    * [AddProject Add Projection]
