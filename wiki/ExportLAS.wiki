@@ -1,0 +1,11 @@
+#summary Export Ground Points Only (LAS)
+
+=Using "Export Ground Points Only (LAS)"=
+
+This tool is meant to export the ground points only (Classification=2) into a new LAS file.
+
+==Usage:==
+
+  * Choose an input LAS file.
+  * The ground points only (classification = 2) will be saved to a new LAS file.
+  * The output LAS file will have the same name as the input with "_GroundOnly" appended.
