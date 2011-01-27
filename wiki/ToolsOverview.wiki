@@ -3,7 +3,7 @@
 
 =Tools Overview=
 
-|| LAS File Utilities || ||	
+|| LAS File Utilities || Process/Manipulate LAS files||	
 || -  [LASFileInfo Get LAS File Info] || Displays header and projection information for an LAS file ||
 || -  [AddProject Add Projection to LAS File(s)] || Adds embedded projection information to LAS files ||
 || -  [ReprojectLAS Reproject LAS File(s)] || Converts existing LAS files into a new map projection ||
@@ -12,7 +12,7 @@
 || -  [BufferLAS Buffer LAS Files] || Geographically buffers the data using neighboring files ||
 || -  [TileLAS Tile LAS File(s)] || Divides one or more files into multiple tiles ||
 || -  [DecimateLAS Decimate LAS File(s)] || Decimates the points the data file ||
-|| -  [SubsetLAS Subset LAS File(s)] || ||
+|| -  [SubsetLAS Subset LAS File(s)] || Subset LAS files by coordinates or image/ROI ||
 || - -  [SubsetLASCoord Subset via Coordinates] || Subsets data files according to user coordinates ||
 || - -  [SubsetLASRoi Subset via Image/ROI] || Subsets data files using a reference image and/or regions of interest ||
 || [HeightFiltering Perform Height Filtering] || Performs vegetation filtering on the data ||
