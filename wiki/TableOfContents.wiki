@@ -14,7 +14,7 @@
       * [BufferLAS Buffer LAS Files]
       * [TileLAS Tile LAS Files]
       * [DecimateLAS Decimate LAS Files]
-      * Subset LAS Files
+      * [SubsetLAS Subset LAS Files]
        *  [SubsetLASCoord Subset via Coordinates]
        *  [SubsetLASRoi Subset via Image/ROI]
     * [HeightFiltering Perform Height Filtering]
