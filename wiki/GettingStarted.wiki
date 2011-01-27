@@ -11,7 +11,7 @@ The BCAL LiDAR Tools package requires that all data be in the .las data format. 
 
 ==Step 2: Tile your data (if necessary)==
 
-In order to accomplish many of the functions in the BCAL LiDAR Tools package, the software must be able to read the individual files into the computer's memory. If the files are too large (or if the computer's memory is limited), they can be broken into smaller files using the tiling feature. Alternatively, large files may also be subset or decimated.
+In order to accomplish many of the functions in the BCAL LiDAR Tools package, the software must be able to read the individual files into the computer's memory. If the files are too large (or if the computer's memory is limited), they can be broken into smaller files using the [TileLAS tiling feature]. Alternatively, large files may also be [SubsetLAS subset] or [DecimateLAS decimated].
 
 ==Step 3: Explore your data==
 
