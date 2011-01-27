@@ -7,3 +7,4 @@
     * [LASFileInfo Get Header Info]
     * [AddProject Add Projection]
     * [ReprojectLAS Reproject LAS]
+    * [AsciiToLAS Convert Ascii to LAS]
