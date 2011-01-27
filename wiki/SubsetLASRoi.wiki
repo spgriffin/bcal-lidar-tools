@@ -18,3 +18,5 @@ This tool is meant to subset LAS format LiDAR data using a reference image and/o
   * The subset data are saved to a single file, even if multiple input files are selected.
   * Because the data are saved to a single file, this tool can also be used to combine multiple LAS files. Simply leave the geographic extents as the default values.
   * If you want to subset by EVF or other vector files, you have to first import the vector file into ENVI and export it as ROI.
+
+[http://bcal.geology.isu.edu/envihelp/images/SubsetImageScreen.jpg]
