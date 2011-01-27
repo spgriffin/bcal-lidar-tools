@@ -13,4 +13,4 @@ This section lists scientific papers that reported using BCAL LiDAR Tools for th
   * Spaete, L., Glenn, N., Derryberry, D., Sankey, T., Mitchell, J., Hardegree, S., [http://bcal.geology.isu.edu/sites/default/files/Spaete%20et%20al%202010.pdf Vegetation and slope effects on accuracy of a LiDAR-derived DEM in the sagebrush steppe]. Remote Sensing Letters, 2 (4), 317-326.
 
 ===Notes===
-Because most of publications from BCAL use the LiDAR tools, only those papers that describe or test algorithms used in the tools are listed. Complete list of BCAL publications is listed at [http://bcal.geology.isu.edu/research.shtml http://bcal.geology.isu.edu/research.shtml].
+Because most of publications from BCAL use the LiDAR tools, only those papers that describe or test algorithms used in the tools are listed. Complete list of BCAL publications is available at [http://bcal.geology.isu.edu/research.shtml http://bcal.geology.isu.edu/research.shtml].
