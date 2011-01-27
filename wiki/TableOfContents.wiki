@@ -2,7 +2,7 @@
 
 *Table of Contents*
   * [Installation Installation Instruction]
-  * [GettingStarted LiDAR Processing Guide]
+  * [ProcessingGuide LiDAR Processing Guide]
   * [ToolsOverview Tools Overview]
   * Help
     * LAS Files
