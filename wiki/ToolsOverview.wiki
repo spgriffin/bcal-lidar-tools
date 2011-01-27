@@ -13,8 +13,8 @@
 || [TileLAS Tile LAS File(s)] || Divides one or more files into multiple tiles ||
 || [DecimateLAS Decimate LAS File(s)] || Decimates the points the data file ||
 || [SubsetLAS Subset LAS File(s)] || ||
-|| [SubsetLASCoord -  Subset via Coordinates] || Subsets data files according to user coordinates ||
-|| [SubsetLASRoi -  Subset via Image/ROI] || Subsets data files using a reference image and/or regions of interest ||
+|| -  [SubsetLASCoord Subset via Coordinates] || Subsets data files according to user coordinates ||
+|| -  [SubsetLASRoi Subset via Image/ROI] || Subsets data files using a reference image and/or regions of interest ||
 || [HeightFiltering Perform Height Filtering] || Performs vegetation filtering on the data ||
 || [RasterizeLAS Rasterize Lidar Data] || Converts raw point data into various raster products||
 || [BoundaryLAS Create Boundary EVF/SHP/KML] || Creates an vector file (EVF, shape or KML) that shows the boundaries of the data ||
