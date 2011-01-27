@@ -8,3 +8,4 @@
     * [AddProject Add Projection]
     * [ReprojectLAS Reproject LAS]
     * [AsciiToLAS Convert Ascii to LAS]
+    * [LASToAscii Convert LAS to Ascii]
