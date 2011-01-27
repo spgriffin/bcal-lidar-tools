@@ -12,7 +12,7 @@
 || [BufferLAS Buffer LAS Files] || Geographically buffers the data using neighboring files ||
 || [TileLAS Tile LAS File(s)] || Divides one or more files into multiple tiles ||
 || [DecimateLAS Decimate LAS File(s)] || Decimates the points the data file ||
-|| Subset LAS File(s) || ||
+|| Subset LAS File(s) ||
 ||   * [SubsetLASCoord Subset via Coordinates] || Subsets data files according to user coordinates ||
 ||   * [SubsetLASRoi Subset via Image/ROI] || Subsets data files using a reference image and/or regions of interest ||
 || [HeightFiltering Perform Height Filtering] || Performs vegetation filtering on the data ||
