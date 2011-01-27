@@ -1,4 +1,5 @@
 #summary Processing Guide for LiDAR Tools
+#labels Featured
 
 =Processing Guide for LiDAR Tools=
 
