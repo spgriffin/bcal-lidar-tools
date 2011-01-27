@@ -2,7 +2,7 @@
 
 *Table of Contents*
   * [Installation Installation Instruction]
-  * [GettingStarted Processing Guide]
+  * [GettingStarted LiDAR Processing Guide]
   * LAS Files
     * [LASFileInfo Get Header Info]
     * [AddProject Add Projection]
