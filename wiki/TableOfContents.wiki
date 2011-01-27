@@ -4,6 +4,7 @@
   * [ProcessingGuide LiDAR Processing Guide]
   * [ToolsOverview Tools Overview]
   * [ToolsUsage Publications]
+  * [UpdateLog Update Log]
   * Help
     * LAS Files
       * [LASFileInfo Get Header Info]
