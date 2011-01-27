@@ -4,7 +4,7 @@
 
   * 04/31/2010 - Added Help, ability to [ExportLAS export boundary as KML/Shapefiles], ability to work alongside ITTVis Lidar Tools, and several other bug fixes
   * 04/16/2010 - Added [LAStoAscii LAS to Ascii conversion tool], [ExportLAS export ground points tool], made minor bug fixes
-  * 10/09/2007 - Added the [ProcesingGuide processing guide] to website
+  * 10/09/2007 - Added the [ProcessingGuide processing guide] to website
   * 07/19/2007 - Added [LASFileInfo file information tool], support for embedded projections, made minor tweaks and fixes
   * 03/15/2007 - Added [AsciiToLAS ascii conversion] and [ReprojectLAS reprojection] tools, made minor tweaks and fixes
   * 11/10/2006 - Added [ProfileLAS profiling] tool, made minor tweaks and fixes
