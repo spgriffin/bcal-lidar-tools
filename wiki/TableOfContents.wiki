@@ -3,6 +3,7 @@
 *Table of Contents*
   * [Installation Installation Instruction]
   * [GettingStarted LiDAR Processing Guide]
+  * [ToolsOverview Tools Overview]
   * LAS Files
     * [LASFileInfo Get Header Info]
     * [AddProject Add Projection]
