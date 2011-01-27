@@ -15,3 +15,5 @@ This tool is meant to decimate one or more LAS files.
 ==Notes:==
 
   * This tool requires data that are in the LAS format.
+
+[http://bcal.geology.isu.edu/envihelp/images/DecimateScreen.jpg]
