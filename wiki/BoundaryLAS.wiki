@@ -17,3 +17,5 @@ This tool is meant to create a vector which bounds the LiDAR data in the input f
 
   * This tool requires data that are in the LAS format.
   * This tool will create a DBF file that is associated with and contains attributes for the output EVF file.
+
+[http://bcal.geology.isu.edu/envihelp/images/BoundScreen.jpg]
