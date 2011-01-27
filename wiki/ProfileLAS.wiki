@@ -18,3 +18,5 @@ This tool is meant to create elevation profiles along one or more user-defined t
 
   * This tool requires data that are in the LAS format.
   * The profiles extracted by this tool are calculated directly from the raw point data, without any interpolation to a raster. The resulting profile is equivalent to the intersection of the transect with a TIN (triangulated irregular network) created from the LiDAR point data within the buffered area around the transect.
+
+[http://bcal.geology.isu.edu/envihelp/images/ProfileScreen.jpg]
