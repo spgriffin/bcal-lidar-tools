@@ -14,3 +14,5 @@ Select the input file(s).
 ==Notes:==
 
 This tool requires data that are in the LAS format.
+
+[http://bcal.geology.isu.edu/envihelp/images/ReprojectScreen.jpg]
