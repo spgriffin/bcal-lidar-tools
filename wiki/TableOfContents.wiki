@@ -14,3 +14,4 @@
     * [DecimateLAS Decimate LAS Files]
     * Subset LAS Files
      *  [SubsetLASCoord Subset via Coordinates]
+     *  [SubsetLASRoi Subset via Image/ROI]
