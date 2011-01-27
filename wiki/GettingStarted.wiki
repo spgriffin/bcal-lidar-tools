@@ -19,7 +19,7 @@ Use the [LASFileInfo file info tool] to explore your data files. Things to look 
 
 ==Step 4: Buffer your data (optional)==
 
-When [HeightFiltering filtering] and/or [RasterizeLAS rasterizing] multiple files at once (for a single project), the software often has problems at the seams between the data tiles. These problems can be overcome by [BufferLAS buffering the data], which creates areas of overlap between the files. The buffer distance (and thus distance of overlap) should be several times the value of the canopy spacing ([HeightFiltering filtering]) or pixel size ([RasterizeLAS rasterizing]).
+When filtering and/or rasterizing multiple files at once (for a single project), the software often has problems at the seams between the data tiles. These problems can be overcome by [BufferLAS buffering the data], which creates areas of overlap between the files. The buffer distance (and thus distance of overlap) should be several times the value of the canopy spacing ([HeightFiltering filtering]) or pixel size ([RasterizeLAS rasterizing]).
 
 ==Step 5: Filter your data==
 
