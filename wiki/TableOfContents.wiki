@@ -11,3 +11,4 @@
     * [LAStoAscii Convert LAS to Ascii]
     * [BufferLAS Buffer LAS files]
     * [TileLAS Tile LAS files]
+    * [DecimateLAS Decimate LAS files]
