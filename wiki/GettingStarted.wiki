@@ -15,16 +15,16 @@ In order to accomplish many of the functions in the BCAL LiDAR Tools package, th
 
 ==Step 3: Explore your data==
 
-Use the file info tool to explore your data files. Things to look for include projection information (or lack thereof), point density, number of returns available, and the spatial extents of the data. Also of use is the boundary tool, with which you can display the geographic footprints of the individual files.
+Use the [LASFileInfo file info tool] to explore your data files. Things to look for include projection information (or lack thereof), point density, number of returns available, and the spatial extents of the data. Also of use is the [BoundaryLAS boundary tool], with which you can display the geographic footprints of the individual files.
 
 ==Step 4: Buffer your data (optional)==
 
-When filtering and/or rasterizing multiple files at once (for a single project), the software often has problems at the seams between the data tiles. These problems can be overcome by buffering the data, which creates areas of overlap between the files. The buffer distance (and thus distance of overlap) should be several times the value of the canopy spacing (filtering) or pixel size (rasterizing).
+When [HeightFiltering filtering] and/or [RasterizeLAS rasterizing] multiple files at once (for a single project), the software often has problems at the seams between the data tiles. These problems can be overcome by [BufferLAS buffering the data], which creates areas of overlap between the files. The buffer distance (and thus distance of overlap) should be several times the value of the canopy spacing ([HeightFiltering filtering]) or pixel size ([RasterizeLAS rasterizing]).
 
 ==Step 5: Filter your data==
 
-If you are interested in calculating the heights of vegetation in your data or determining bare ground elevations, use the height filtering tool.
+If you are interested in calculating the heights of vegetation in your data or determining bare ground elevations, use the [HeightFiltering height filtering tool].
 
 ==Step 6: Rasterize your data==
 
-Use the raster tool to create various raster products from your data. Remember that the raster products related to vegetation and/or bare ground cannot be created unless the data have been filtered first.
+Use the [RasterizeLAS raster tool] to create various raster products from your data. Remember that the raster products related to vegetation and/or bare ground cannot be created unless the data have been filtered first.
