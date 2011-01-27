@@ -17,3 +17,5 @@ This tool is meant to separate one or more data files into a specified number of
   * This tool requires data that are in the LAS format.
   * The latitudinal and longitudinal extents of the output files will be uniform.
   * This tool has been optimized to process very large files. If input data files are found to be too large to otherwise process, this tool may be used to divide them into smaller, more manageable files.
+
+[http://bcal.geology.isu.edu/envihelp/images/TileScreen.jpg]
