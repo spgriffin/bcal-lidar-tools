@@ -23,4 +23,6 @@ This viewer is used to display lidar point data.
   * Because most data sets contain far too many points for the viewer to adequately display, a random subset of points are utilized. The number of subset points can be adjusted by the user under "Properties".
   * If the colors are set corresponding to an image ("Style->Surface Color Type->From Image"), the source image must be in the same projection as the lidar data and must completely cover the the geographical extent of the lidar data.
 
-[http://bcal.geology.isu.edu/envihelp/images/ViewerScreen.jpg]
+==Visualization Options: ==
+[http://bcal-lidar-tools.googlecode.com/svn/wiki/images/BCAL_Visualization.jpg]
+[http://bcal-lidar-tools.googlecode.com/svn/wiki/images/BCAL_Viz_Options.JPG]
