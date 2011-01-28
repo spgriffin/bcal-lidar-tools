@@ -1,8 +1,0 @@
-#summary Subset LAS File(s)
-
-=Using "Subset LAS File(s)"=
-
-This tool is meant to subset LAS format LiDAR data.
-
-  * [SubsetLASCoord Subset LAS File(s) via Coordinates]
-  * [SubsetLASRoi Subset LAS File(s) via Image/ROI]
