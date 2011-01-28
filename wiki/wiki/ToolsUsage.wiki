@@ -1,0 +1,16 @@
+#summary BCAL LiDAR Tools in Research
+
+= Scientific Publications =
+
+This section lists scientific papers that reported using BCAL LiDAR Tools for their LiDAR data processing and analysis. 
+
+  * Streutker, D. and Glenn, N., 2006. [http://bcal.geology.isu.edu/manuscripts/Streutker_2006_RSE.pdf LiDAR measurement of sagebrush steppe vegetation heights]. Remote Sensing of Environment, 102, 135-145.
+
+  * Long, B., Cottin, A., Collin, A., 2007. [http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=04423518 What optech's bathymetric LiDAR sees underwater]. Geoscience and Remote Sensing Symposium, 2007. IGARSS 2007. pp. 3170-3173.
+
+  * Yun, Y., and Ying, L., 2009. [http://ieeexplore.ieee.org/ielx5/5300806/5300807/05304531.pdf A Novel Deformable Model for Urban Vegetation Detection Using LiDAR Data]. 2nd International Congress on Image and Signal Processing, 2009. CISP '09. pp. 1-5.
+
+  * Spaete, L., Glenn, N., Derryberry, D., Sankey, T., Mitchell, J., Hardegree, S., [http://bcal.geology.isu.edu/sites/default/files/Spaete%20et%20al%202010.pdf Vegetation and slope effects on accuracy of a LiDAR-derived DEM in the sagebrush steppe]. Remote Sensing Letters, 2 (4), 317-326.
+
+===Notes===
+Because most of publications from BCAL use the LiDAR tools, only those papers that describe or test algorithms used in the tools are listed. Complete list of BCAL publications is available at [http://bcal.geology.isu.edu/research.shtml http://bcal.geology.isu.edu/research.shtml].
