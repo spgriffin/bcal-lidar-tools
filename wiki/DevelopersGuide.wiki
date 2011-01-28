@@ -16,5 +16,5 @@ Maintaining a subversion (SVN) system from IDL Workbench is not very straightfor
     * Type "https://bcal-lidar-tools.googlecode.com/svn/trunk/" in Url field and follow the wizard instructions.
   # Once you have imported source files, you should be able to do other subversion tasks by right-clicking on project folder, and selecting "Team".
 
-=Current version and Branches=
+==Current version and Branches==
 There are currently two branches 1.x.x and 2.x.x. Branch 2.x.x will be major rehaul of the tools, removing dependencies on ENVI altogether. 
