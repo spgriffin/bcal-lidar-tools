@@ -1,6 +1,7 @@
 #summary BCAL LiDAR Tools version 1.0.0
 
   * [Installation Installation Instruction]
+  * [DevelopersGuide Developers Guide]
   * [ProcessingGuide LiDAR Processing Guide]
   * [ToolsOverview Tools Overview]
   * [ToolsUsage Publications]
