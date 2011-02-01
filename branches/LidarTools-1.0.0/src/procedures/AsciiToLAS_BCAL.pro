@@ -20,7 +20,7 @@
 ;       Idaho State University
 ;       322 E. Front St., Ste. 240
 ;       Boise, ID  83702
-;       http://geology.isu.edu/BCAL
+;       http://bcal.geology.isu.edu/
 ;
 ; DEPENDENCIES:
 ;
@@ -34,6 +34,7 @@
 ;       Written by David Streutker, March 2007.
 ;       Added support for embedded projections, June 2007.
 ;       Added projection-dependent scaling, October 2007.
+;       Added support for LAS 1.2 format, June 2010 (Rupesh Shrestha).
 ;
 ;###########################################################################
 ;
@@ -42,7 +43,7 @@
 ; This software is OSI Certified Open Source Software.
 ; OSI Certified is a certification mark of the Open Source Initiative.
 ;
-; Copyright � 2007 David Streutker, Idaho State University.
+; Copyright @ 2007 David Streutker, Idaho State University.
 ;
 ; This software is provided "as-is", without any express or
 ; implied warranty. In no event will the authors be held liable
@@ -158,7 +159,7 @@ readBase = widget_auto_base(title='Data Selection')
     dummy     = widget_text(readBase, /scroll, value=dataSamp, ysize=6)
 
     headBase  = widget_base(readBase, /row)
-    dummy     = widget_param(headBase, default=0, dt=2, floor=0, prompt='Enter number of lines in the file header: ', $
+    dummy     = widget_param(headBase, default=1, dt=2, floor=0, prompt='Enter number of lines in the file header: ', $
                              uvalue='nHeader', /auto)
 
     paramBase = widget_base(readBase, /row)
@@ -175,28 +176,52 @@ readBase = widget_auto_base(title='Data Selection')
     intenBase = widget_base(leftBase, /row, /align_right)
     dummy     = widget_pmenu(intenBase, list=fieldList, default=nFields, prompt='Select intensity field:', $
                              uvalue='fInten', /auto)
-
-    rightBase = widget_base(paramBase, /column)
-    timeBase  = widget_base(rightBase, /row, /align_right)
-    dummy     = widget_pmenu(timeBase, list=fieldList,  default=nFields, prompt='Select GPS time field:', $
-                             uvalue='fTime', /auto)
-    retBase   = widget_base(rightBase, /row, /align_right)
+    retBase   = widget_base(leftBase, /row, /align_right)
     dummy     = widget_pmenu(retBase, list=fieldList,   default=nFields, prompt='Select return number field:', $
                              uvalue='fReturn', /auto)
+;    nretBase   = widget_base(leftBase, /row, /align_right)
+;    dummy     = widget_pmenu(nretBase, list=fieldList,   default=nFields, prompt='Select number of returns field:', $
+;                             uvalue='fnReturn', /auto)                           
+    classBase = widget_base(leftBase, /row, /align_right)
+    dummy     = widget_pmenu(classBase, list=fieldList, default=nFields, prompt='Select classfication field:', $
+                             uvalue='fClass', /auto)
+    timeBase  = widget_base(leftBase, /row, /align_right)
+    dummy     = widget_pmenu(timeBase, list=fieldList,  default=nFields, prompt='Select GPS time field:', $
+                             uvalue='fTime', /auto)
+                             
+    rightBase = widget_base(paramBase, /column)
     angleBase = widget_base(rightBase, /row, /align_right)
     dummy     = widget_pmenu(angleBase, list=fieldList, default=nFields, prompt='Select scan angle field:', $
                              uvalue='fAngle', /auto)
-    lineBase  = widget_base(rightBase, /row, /align_right)
-    dummy     = widget_pmenu(lineBase, list=fieldList,  default=nFields, prompt='Select flight line field:', $
-                             uvalue='fLine', /auto)
-
+;    sdirBase = widget_base(rightBase, /row, /align_right)
+;    dummy     = widget_pmenu(sdirBase, list=fieldList, default=nFields, prompt='Select scan direction field:', $
+;                             uvalue='fScanDir', /auto)
+;    lineBase  = widget_base(rightBase, /row, /align_right)
+;    dummy     = widget_pmenu(lineBase, list=fieldList,  default=nFields, prompt='Select edge of flight line field:', $
+;                             uvalue='fLine', /auto)
+    userdBase = widget_base(rightBase, /row, /align_right)
+    dummy     = widget_pmenu(userdBase, list=fieldList, default=nFields, prompt='Select user data field:', $
+                             uvalue='fuserData', /auto)
+    ptsrcBase = widget_base(rightBase, /row, /align_right)
+    dummy     = widget_pmenu(ptsrcBase, list=fieldList, default=nFields, prompt='Select point source ID field:', $
+                             uvalue='fptsrc', /auto)
+    redBase = widget_base(rightBase, /row, /align_right)
+    dummy     = widget_pmenu(redBase, list=fieldList, default=nFields, prompt='Select red image channel field:', $
+                             uvalue='fred', /auto)
+    greenBase = widget_base(rightBase, /row, /align_right)
+    dummy     = widget_pmenu(greenBase, list=fieldList, default=nFields, prompt='Select green image channel field:', $
+                             uvalue='fgreen', /auto)
+    blueBase = widget_base(rightBase, /row, /align_right)
+    dummy     = widget_pmenu(blueBase, list=fieldList, default=nFields, prompt='Select blue image channel field:', $
+                             uvalue='fblue', /auto)
+                             
     outBase   = widget_base(readBase, /row)
     fileBase  = widget_base(outBase, /column)
     dummy     = widget_outf(fileBase, prompt='Select the output directory ', /directory, $
                             uvalue='lasName', /auto)
 
     verBase   = widget_base(readBase, /row)
-    dummy     = widget_pmenu(verBase, list=['Version 1.0','Version 1.1'], default=1, prompt='Select LAS format:', $
+    dummy     = widget_pmenu(verBase, list=['Version 1.0','Version 1.1','Version 1.2'], default=2, prompt='Select LAS format:', $
                              uvalue='format', /auto)
 
     dummy     = widget_map(readBase, default_map=[0,0], uvalue='proj', /auto_manage)
@@ -209,16 +234,27 @@ fEast   = result.fEast
 fNorth  = result.fNorth
 fElev   = result.fElev
 fInten  = result.fInten
+fClass  = result.fClass
 fTime   = result.fTime
 fReturn = result.fReturn
-fAngle  = result.fAngle
-fLine   = result.fLine
+;fnReturn = result.fnReturn
+;fAngle  = result.fAngle
+;fScanDir  = result.fScanDir
+;fLine   = result.fLine
+fuserdata   = result.fuserdata
+fptsrc   = result.fptsrc
+fred   = result.fred
+fgreen   = result.fgreen
+fblue   = result.fblue
 
 outputDir    = result.lasName
 versionMinor = result.format
 proj         = result.proj.proj
 
-if fTime eq nFields then pointFormat = 0 else pointFormat = 1
+if (fTime eq nFields) and (fred eq nFields) then pointFormat = 0 
+if (fTime ne nFields) and (fred eq nFields) then pointFormat = 1
+if (fTime eq nFields) and (fred ne nFields) then pointFormat = 2
+if (fTime ne nFields) and (fred ne nFields) then pointFormat = 3
 
     ; Convert the projection to variable length records
 
@@ -329,8 +365,15 @@ for a=0,nFiles-1 do begin
 
             if fInten ne nFields then data.inten = dataTemp[fInten]
             if fTime  ne nFields then data.time  = dataTemp[fTime]
-            if fAngle ne nFields then data.angle = dataTemp[fAngle]
-            if fLine  ne nFields then data.user  = dataTemp[fLine]
+;            if fnReturn ne nFields then data.nReturn = dataTemp[fAngle]
+;            if fAngle ne nFields then data.angle = dataTemp[fAngle]
+;            if fLine  ne nFields then data.user  = dataTemp[fLine]
+            if fClass ne nFields then data.class  = dataTemp[fClass]
+            if fuserdata ne nFields then data.user  = dataTemp[fuserdata]
+            if fred   ne nFields then data.red  = dataTemp[fred]
+            if fgreen ne nFields then data.green  = dataTemp[fgreen]
+            if fblue  ne nFields then data.blue  = dataTemp[fblue]
+         
 
             if fReturn ne nFields then begin
                 data.nReturn = dataTemp[fReturn]

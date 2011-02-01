@@ -32,6 +32,7 @@
 ;       Written by David Streutker, April 2006.
 ;       Added support for "large" files, August 2006.
 ;       Added support for embedded projection, June 2007
+;       Added ability to handle large number of tiles, June 2010 (Rupesh Shrestha).
 ;
 ;###########################################################################
 ;
@@ -72,15 +73,15 @@ pro TileLAS_BCAL, event
 
 compile_opt idl2, logical_predicate
 
-    ; Establish error handler.
-
-catch, theError
-if theError ne 0 then begin
-    catch, /cancel
-    help, /last_message, output=errText
-    errMsg = dialog_message(errText, /error, title='Error processing request')
-    return
-endif
+;    ; Establish error handler.
+;
+;catch, theError
+;if theError ne 0 then begin
+;    catch, /cancel
+;    help, /last_message, output=errText
+;    errMsg = dialog_message(errText, /error, title='Error processing request')
+;    return
+;endif
 
     ; Open input files
 
@@ -168,23 +169,23 @@ day  = julday(date[1],date[2],date[0]) - julday(1,1,date[0]) + 1
 outputHeader.day  = uint(day)
 outputHeader.year = uint(date[0])
 
+
+
     ; Initialize individual tile files
 
 for g=0,yNum-1 do begin
 for f=0,xNum-1 do begin
+    
+    fileLun = f + (g * xNum) + 1
 
-    outputFile = outputDir + '\' + strcompress(f+1,/remove) + '_' + strcompress(g+1,/remove) + '.las'
+    outputFile = outputDir + '\Tile_' + strcompress(fileLun,/remove) + '.las'
 
     WriteLAS_BCAL, outputFile, outputHeader, records=records, /nodata, /check
 
-    fileLun = f + (g * xNum) + 1
-
-        ; Leave the files open to append the data
-
-    openw, fileLun, outputFile, /swap_if_big_endian, /append
-
 endfor
 endfor
+
+
 
     ; Initialize various parameters
 
@@ -199,7 +200,7 @@ sampSize = 1d5
 
 for a=0,nFiles-1 do begin
 
-        ; Update the status window
+       ; Update the status window
 
     statBase = widget_auto_base(title='Tiling')
     statText = ['Tiling Progress: ', file_basename(inputFiles[a]), $
@@ -247,8 +248,13 @@ for a=0,nFiles-1 do begin
         for c=0,nTiles-1 do begin
 
             if tileHist[c] ne 0 then begin
+            
+                outputFile = outputDir + '\Tile_' + strcompress(c+1,/remove) + '.las'
 
-                writeu, c+1, data[index[index[c]:index[c+1]-1]]
+                        ; Leave the files open to append the data
+
+                openw, clun, outputFile, /swap_if_big_endian, /append, /get_lun
+                writeu, clun, data[index[index[c]:index[c+1]-1]]
 
                 tilePoints[c] += tileHist[c]
 
@@ -258,6 +264,8 @@ for a=0,nFiles-1 do begin
                 tileExtent[c,1,1] >= yMaxTemp
                 tileExtent[c,2,0] <= min(z[index[index[c]:index[c+1]-1]], max=zMaxTemp)
                 tileExtent[c,2,1] >= zMaxTemp
+                
+                free_lun, clun
 
             endif
 
@@ -275,7 +283,9 @@ for a=0,nFiles-1 do begin
         ; Destroy the status window
 
     envi_report_init, base=statBase, /finish
-
+    
+    free_lun, inputLun
+    
 endfor
 
 close, /all
@@ -300,24 +310,26 @@ for s=0,xNum-1 do begin
     outputHeader.yMax = tileExtent[updateLun,1,1]
     outputHeader.zMin = tileExtent[updateLun,2,0]
     outputHeader.zMax = tileExtent[updateLun,2,1]
-
-    outputFile = outputDir + '\' + strcompress(s+1,/remove) + '_' + strcompress(t+1,/remove) + '.las'
+    
+    outputFile = outputDir + '\Tile_' + strcompress(updateLun+1,/remove) + '.las'
+;    outputFile = outputDir + '\' + strcompress(s+1,/remove) + '_' + strcompress(t+1,/remove) + '.las'
 
         ; Update file headers
 
-    openu,     updateLun+1, outputFile
-    point_lun, updateLun+1, 0
-    writeu,    updateLun+1, outputHeader
-    close,     updateLun+1
-
+    openu,     hlun, outputFile, /get_lun
+    point_lun, hLun, 0
+    writeu,    hLun, outputHeader
+    free_lun,  hLun
+    
         ; Delete any empty files
 
     if tilePoints[updateLun] eq 0 then file_delete, outputFile
 
+
 endfor
 endfor
 
-
+close, /all
 end
 
 

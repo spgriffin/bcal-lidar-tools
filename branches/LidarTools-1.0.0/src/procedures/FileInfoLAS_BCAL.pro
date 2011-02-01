@@ -5,7 +5,7 @@
 ;
 ; PURPOSE:
 ;
-;       The purpose of this program is to display information about a selected LAS file.
+;       The purpose of this program is to display header information of a selected LAS file.
 ;
 ; PRODUCTS:
 ;
@@ -20,7 +20,7 @@
 ;       Idaho State University
 ;       322 E. Front St., Ste. 240
 ;       Boise, ID  83702
-;       http://geology.isu.edu/BCAL
+;       http://bcal.geology.isu.edu/
 ;
 ; DEPENDENCIES:
 ;
@@ -28,10 +28,10 @@
 ;
 ; MODIFICATION HISTORY:
 ;
+;       June 2007 - Written by David Streutker.
 ;       April 2010 - Fixed bug that caused program to crash in certain
 ;                   condition (Rupesh Shrestha)
-;       June 2007 - Written by David Streutker.
-;
+;                   
 ;###########################################################################
 ;
 ; LICENSE
@@ -39,7 +39,7 @@
 ; This software is OSI Certified Open Source Software.
 ; OSI Certified is a certification mark of the Open Source Initiative.
 ;
-; Copyright � 2007 David Streutker, Idaho State University.
+; Copyright @ 2007 David Streutker, Idaho State University.
 ;
 ; This software is provided "as-is", without any express or
 ; implied warranty. In no event will the authors be held liable

@@ -1,7 +1,7 @@
 ;+
 ; NAME:
 ;
-;       DecimateLAS_BCAL
+;       DecimateLASper_BCAL
 ;
 ; PURPOSE:
 ;
@@ -17,23 +17,23 @@
 ;
 ; AUTHOR:
 ;
-;       David Streutker
+;       Rupesh Shrestha
 ;       Boise Center Aerospace Laboratory
 ;       Idaho State University
 ;       322 E. Front St., Ste. 240
 ;       Boise, ID  83702
-;       http://geology.isu.edu/BCAL
+;       http://bcal.geology.isu.edu/
 ;
 ; DEPENDENCIES:
 ;
+;       GetBounds_BCAL.pro
 ;       InitHeaderLAS_BCAL.pro
 ;       ReadLAS_BCAL.pro
+;       WriteLAS_BCAL.pro
 ;
 ; MODIFICATION HISTORY:
 ;
-;       Written by David Streutker, August 2006.
-;       Added support for embedded projection, June 2007
-;       Fixed few issues related to randomization, July 2010. (Rupesh Shrestha)
+;       Written by Rupesh Shrestha, June 2010.
 ;
 ;###########################################################################
 ;
@@ -42,7 +42,7 @@
 ; This software is OSI Certified Open Source Software.
 ; OSI Certified is a certification mark of the Open Source Initiative.
 ;
-; Copyright @ 2006 David Streutker, Idaho State University.
+; Copyright © 2010 Rupesh Shrestha, Idaho State University.
 ;
 ; This software is provided "as-is", without any express or
 ; implied warranty. In no event will the authors be held liable
@@ -67,9 +67,10 @@
 ;
 ;###########################################################################
 
+
     ; Begin main program
 
-pro DecimateLAS_BCAL, event
+pro DecimateLASper_BCAL, event
 
 compile_opt idl2, logical_predicate
 
@@ -92,89 +93,31 @@ inputFiles = dialog_pickfile(title='Select LAS file(s)', filter='*.las', /multip
 nFiles  = n_elements(inputFiles)
 nPoints = lonarr(nFiles)
 
-    ; Determine the min's, max's, and number of points in each file
-
-for a=0,nFiles-1 do begin
-
-    ReadLAS_BCAL, inputFiles[a], header, /nodata
-    nPoints[a] = header.nPoints
-
-    if a eq 0 then begin
-
-        xMin = header.xMin
-        xMax = header.xMax
-        yMin = header.yMin
-        yMax = header.yMax
-        zMin = header.zMin
-        zMax = header.zMax
-
-    endif else begin
-
-        xMin <= header.xMin
-        xMax >= header.xMax
-        yMin <= header.yMin
-        yMax >= header.yMax
-        zMin <= header.zMin
-        zMax >= header.zMax
-
-    endelse
-
-endfor
-
     ; Get the decimation parameters from the user
 
 readBase = widget_auto_base(title='Select Decimation Parameters')
 
-    deciBase    = widget_base(readBase, /row)
-    deciField   = widget_param(deciBase, /comma, ceil=total(nPoints), default=1e6, dt=3, floor=1, $
-                              prompt='Select number of points: ', uvalue='deci', /auto_manage)
+deciBase    = widget_base(readBase, /row)
 
-    outputBase  = widget_base(readBase, /row)
-    fileBase    = widget_base(outputBase, /column)
-    outputField = widget_outf(fileBase, prompt='Select output file', default='Decimate.las', $
+deciField   = widget_param(deciBase, /percent, ceil=100, default=10, dt=5, floor=0, $
+                              prompt='Select percent of points to keep: ', uvalue='deci', /auto_manage)
+                        
+outputBase  = widget_base(readBase, /row)
+fileBase    = widget_base(outputBase, /column)
+outputField = widget_outf(fileBase, prompt='Select output directory', /directory, $
                               uvalue='lasName', /auto_manage)
 
 result = auto_wid_mng(readBase)
 if result.accept eq 0 then return
 
 nDeci      = result.deci
-outputFile = result.lasName
+outputDir  = result.lasName
+
+
 
     ; Determine the number of points to get from each file
 
 seed  = systime(/seconds) mod 100
-nTemp = round((nPoints / total(nPoints, /double)) * nDeci)
-if nFiles gt 1 then nTemp[0] = nDeci - total(nTemp[1:*])
-
-    ; Initialize the header for the output dataset
-
-outputHeader = InitHeaderLAS_BCAL()
-
-outputHeader.nPoints = nDeci
-
-outputHeader.versionMinor = header.versionMinor
-outputHeader.pointFormat  = header.pointFormat
-
-outputHeader.xMax = xMax
-outputHeader.xMin = xMin
-outputHeader.yMax = yMax
-outputHeader.yMin = yMin
-outputHeader.zMax = zMax
-outputHeader.zMin = zMin
-
-outputHeader.xScale  = header.xScale
-outputHeader.yScale  = header.yScale
-outputHeader.zScale  = header.zScale
-outputHeader.xOffset = header.xOffset
-outputHeader.yOffset = header.yOffset
-outputHeader.zOffset = header.zOffset
-
-    ; Write the header and variable length records to the file.  Leave the file
-    ; open for appending the data.
-
-WriteLAS_BCAL, outputFile, outputHeader, records=records, /nodata, /check
-
-openw, outputLun, outputFile, /get_lun, /swap_if_big_endian, /append
 
     ; Set up status message window
 
@@ -195,33 +138,27 @@ for b=0,nFiles-1 do begin
 
         ; Read the input file
 
-    ReadLAS_BCAL, inputFiles[b], header, data
+    ReadLAS_BCAL, inputFiles[b], header, data, records=records
+    
+    nTemp = round(header.nPoints * (nDeci/100)) 
 
         ; Select the neccessary number of random points from the input file and write
         ; them to the output file.
 
-    index = randomu(seed, nTemp[b],/double) * (header.nPoints)
+    index = randomu(seed, nTemp,/double) * header.nPoints
     index = index[uniq(index,sort(index))]
-    index = index[0:nTemp[b]-1]
+    index = index[0:nTemp-1]
+    
+    header.nPoints =  nTemp
+    
+    ; Write the header and data to a new file in the output directory
 
-    writeu, outputLun, data[index]
+    outputFile = outputDir + '\' + file_basename(inputFiles[b])
+    WriteLAS_BCAL, outputFile, header, data[index], records=records, /check
 
     data = 0b
 
 endfor
-
-    ; Close the output file
-
-free_lun, outputLun
-
-ReadLAS_BCAL, outputFile, header, records=records, data
-
-header.nReturns = histogram((data.nReturn mod 8), min=1, max=5)
-
-if total(header.nReturns) ne header.nPoints then $
-    header.nReturns[0] += (header.nPoints - total(header.nReturns))
-
-WriteLAS_BCAL, outputFile, header, records=records, data
 
     ; Destroy the status window
 
