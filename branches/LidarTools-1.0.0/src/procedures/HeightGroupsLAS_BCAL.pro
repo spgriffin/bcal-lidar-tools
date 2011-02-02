@@ -70,7 +70,7 @@
 
     ; Begin main program
 
-pro HeightGroupsLAS_outputF, event
+pro HeightGroupsLAS_BCAL_outputF, event
    compile_opt idl2, logical_predicate
    widget_control, event.top, get_uvalue=pstate
    
@@ -86,7 +86,7 @@ pro HeightGroupsLAS_outputF, event
 end
 ;------------------------------------------------------------------------------
 
-pro HeightGroupsLAS_btnGroups, event
+pro HeightGroupsLAS_BCAL_btnGroups, event
    compile_opt idl2, logical_predicate
    widget_control, event.top, get_uvalue=pstate
    widget_control, event.id, get_uval=uval
@@ -139,7 +139,7 @@ pro HeightGroupsLAS_btnGroups, event
 end
 ;------------------------------------------------------------------------------
 
-pro HeightGroupsLAS_btnRun, event
+pro HeightGroupsLAS_BCAL_btnRun, event
    compile_opt idl2, logical_predicate
    widget_control, event.top, get_uvalue=pstate
    widget_control, event.id, get_uval=uval
@@ -228,7 +228,7 @@ pro HeightGroupsLAS_btnRun, event
 end
 ;------------------------------------------------------------------------------
 
-PRO HeightGroupsLAS_cleanup, tlb
+PRO HeightGroupsLAS_BCAL_cleanup, tlb
    ; This routine is called when the application quits.
    ; Retrieve the state variable and free the pointer.
    widget_control, tlb, GET_UVALUE=pState
@@ -236,7 +236,7 @@ PRO HeightGroupsLAS_cleanup, tlb
 END
 ;------------------------------------------------------------------------------
 
-pro HeightGroupsLAS, event
+pro HeightGroupsLAS_BCAL, event
    compile_opt idl2, logical_predicate
    
    ; Set-up error handler
