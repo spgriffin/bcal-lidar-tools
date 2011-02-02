@@ -3,6 +3,7 @@
 
 = Developers' Guide =
 
+==Subversion in IDL ==
 Maintaining a subversion (SVN) system from IDL Workbench is not very straightforward. This guide is for beginner developers who want to help in the BCAL LiDAR Tools development. This guide is written for IDL 8.0. The process should be similar to other versions of IDL.
 
   # Download and install a [http://subversion.apache.org/packages.html Subversion Binary Package] for your operating system.
@@ -15,6 +16,9 @@ Maintaining a subversion (SVN) system from IDL Workbench is not very straightfor
     * Select "Create new repository location" and click "Next".
     * Type "https://bcal-lidar-tools.googlecode.com/svn/trunk/" in Url field and follow the wizard instructions.
   # Once you have imported source files, you should be able to do other subversion tasks by right-clicking on project folder, and selecting "Team".
+
+==Creating patches online==
+If you do not have commit privileges, you can [http://googlecode.blogspot.com/2011/01/make-quick-fixes-quicker-on-google.html create patches online], and submit them for review. 
 
 ==Current version and Branches==
 There are currently two branches 1.x.x and 2.x.x. Branch 2.x.x will be a major rehaul of the tools, removing dependencies on ENVI altogether. 
