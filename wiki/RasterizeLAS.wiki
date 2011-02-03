@@ -45,4 +45,4 @@ This tool is meant to convert LiDAR point data into various raster products.
   * Tip: If the input files overlap, then the output raster should be seamless. Use the [BufferLAS buffering tool] to create overlapping LAS files.
   * This tool currently uses simple nearest neighbor-type interpolation, which may not be optimal in some cases.
 
-[http://bcal.geology.isu.edu/envihelp/images/RasterScreen.jpg]
+[http://bcal-lidar-tools.googlecode.com/svn/wiki/images/RasterScreen.jpg]
