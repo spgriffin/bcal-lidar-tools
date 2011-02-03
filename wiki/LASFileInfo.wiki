@@ -1,6 +1,6 @@
-#summary Using "Get LAS File Info"
+#summary Using "Get LAS Header Info"
 
-=Using "Get LAS File Info"=
+=Using "Get LAS Header Info"=
 
 This tool is used to display information about an LAS file.
 
