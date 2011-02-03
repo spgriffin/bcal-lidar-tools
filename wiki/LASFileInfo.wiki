@@ -16,4 +16,4 @@ This tool is used to display information about an LAS file.
 
 This tool requires data that are in the LAS format.
 
-[http://bcal.geology.isu.edu/envihelp/images/InfoScreen.jpg]
+[http://bcal-lidar-tools.googlecode.com/svn/wiki/images/InfoScreen.jpg]
