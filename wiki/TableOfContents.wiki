@@ -27,8 +27,8 @@
     * [HeightFiltering Perform Height Filtering]
     * [BareDEM Create Bare-earth DEM]
     * Raster Products
-      * [TopoAll  Topographic Products (Bare)]    
-      * [TopoBare  Topographic Products (All)]    
+      * [TopoBare  Topographic Products (Bare)]    
+      * [TopoAll  Topographic Products (All)]    
       * [VegProducts  Vegetation Products]
       * [IntensityProducts  Intensity Products]    
       * [PrepareLAS  Prepare LAS file(s)]    
