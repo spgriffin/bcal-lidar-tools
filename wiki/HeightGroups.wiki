@@ -18,7 +18,6 @@ Input LAS file must be [HeightFiltering height filtered]. If the LAS file is hei
   * This tool requires data that are in the LAS format.
   * Vegetation height values should be multiplied by the Z scale factor to calculate heights in the map projection units.
   * For more information on this tool, please refer to:
-    * Ehinger, S. 2010. [http://bcal.geology.isu.edu/docs/Ehinger_thesis_0629_Final.pdf Design, development, and application of 
-LiDAR data processing tools]. Masters Thesis. Idaho State University, Department of Geosciences.
+    * Ehinger, S. 2010. [http://bcal.geology.isu.edu/docs/Ehinger_thesis_0629_Final.pdf Design, development, and application of LiDAR data processing tools]. Masters Thesis. Idaho State University, Department of Geosciences.
 
 [http://bcal-lidar-tools.googlecode.com/svn/wiki/images/VegGroups.jpg]
