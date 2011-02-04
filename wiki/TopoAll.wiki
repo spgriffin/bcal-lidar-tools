@@ -42,4 +42,4 @@ This tool is meant to convert LiDAR point data into various raster topographic p
     * Stage, A.R., 1976. [http://www.ingentaconnect.com/content/saf/fs/1976/00000022/00000004/art00020 An Expression for the Effect of Aspect, Slope, and Habitat Type on Tree Growth]. Forest Science, 22: 457-460.
     * Roberts. D. W. and Cooper, S. V. (1989). Concepts and techniques of vegetation mapping. In: Land Classifications Based on Vegetation - Applications for Resource Management. USDA Forest Service GTR INT-257, Ogden, UT, pp 90-96.
 
-[http://bcal-lidar-tools.googlecode.com/svn/wiki/images/TopoBare.jpg]
+[http://bcal-lidar-tools.googlecode.com/svn/wiki/images/TopoAll.jpg]
