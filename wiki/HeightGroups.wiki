@@ -1,0 +1,21 @@
+#summary Create Vegetation Height Groups
+
+=Using "Create Vegetation Height Groups"=
+
+This tool is meant to separate input LAS file into user-specified vegetation height groups.  This kind of separation can be useful for performing analysis in voxel space. 
+
+Input LAS file must be [HeightFiltering height filtered]. If the LAS file is height filtered outside BCAL LiDAR tools, LAS file should be [PrepareLAS pre-processed] before running through this tool.
+
+==Usage:==
+
+  * Select the input LAS file.
+  * Add vegetation height groups you want to create.
+  * Select the output directory. 
+  * Click 'Run' button. The output LAS files, one for each vegetation height group, will be saved in the new output directory.
+
+==Notes:==
+
+  * This tool requires data that are in the LAS format.
+  * Vegetation height values should be multiplied by the Z scale factor to calculate heights in the map projection units.
+
+[http://bcal-lidar-tools.googlecode.com/svn/wiki/images/VegGroups.jpg]
