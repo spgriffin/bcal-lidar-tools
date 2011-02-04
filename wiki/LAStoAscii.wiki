@@ -14,7 +14,7 @@ This tool is meant to convert one or more LAS format data files to text (ascii) 
 
 ==Notes:==
 
-  * ‘All available fields’ includes the following items from the [http://www.asprs.org/society/committees/standards/asprs_las_format_v11.pdf LAS Version 1.1 Specification]: X (X_Easting), Y (Y_Northing), Z (Z_Elevation), Intensity (Intensity), Return Number (nReturn), Classification (Class), Scan Angle Rank (Angle), User Data (User), Point Source ID (Source), and GPS Time (GPS_Time)
+  * ‘All available fields’ includes the following items from the [http://www.asprs.org/society/committees/standards/lidar_exchange_format.html LAS Version 1.2 Specification]: X (X_Easting), Y (Y_Northing), Z (Z_Elevation), Intensity (Intensity), Return Number (nReturn), Classification (Class), Scan Angle Rank (Angle), User Data (User), Point Source ID (Source), Red, Green, Blue, and GPS Time (GPS_Time)
   * If the LiDAR data have been processed through the BCAL height filtering algorithm, these results will be stored in the Classification and Point Source ID fields. The Classification field will distinguish ground and vegetation returns (0 = never classified, 1 = unclassified (errors), 2 = ground and 3 = vegetation). The Point Source ID field will contain the vegetation heights (usually in cm). Errors and unclassified points will have a height value of 65535.
 
 [http://bcal.geology.isu.edu/envihelp/images/LASScreen.jpg]
