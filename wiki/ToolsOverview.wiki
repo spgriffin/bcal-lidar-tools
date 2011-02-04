@@ -4,20 +4,31 @@
 =Tools Overview=
 
 || LAS File Utilities || Process/Manipulate LAS files||	
-|| -  [LASFileInfo Get LAS File Info] || Displays header and projection information for an LAS file ||
+|| -  [LASFileInfo Get LAS Header Info] || Displays header and projection information for an LAS file ||
+|| -  [LASFileInfo Get LAS Data Info] || Displays descriptive data statistics for LAS file(s) ||
 || -  [AddProject Add Projection to LAS File(s)] || Adds embedded projection information to LAS files ||
 || -  [ReprojectLAS Reproject LAS File(s)] || Converts existing LAS files into a new map projection ||
 || -  [AsciiToLAS Convert Ascii Data to LAS] || Converts text point data into LAS format lidar files ||
 || -  [LAStoAscii Convert LAS Data to Ascii] || Converts LAS format lidar files into delimited text point data ||
+|| -  [BoundaryLAS Create Boundary EVF/SHP/KML] || Creates an vector file (EVF, shape or KML) that shows the boundaries of the data ||
 || -  [BufferLAS Buffer LAS Files] || Geographically buffers the data using neighboring files ||
 || -  [TileLAS Tile LAS File(s)] || Divides one or more files into multiple tiles ||
 || -  [DecimateLAS Decimate LAS File(s)] || Decimates the points the data file ||
 || -  [SubsetLAS Subset LAS File(s)] || Subset LAS files by coordinates or image/ROI ||
 || - -  [SubsetLASCoord Subset via Coordinates] || Subsets data files according to user coordinates ||
 || - -  [SubsetLASRoi Subset via Image/ROI] || Subsets data files using a reference image and/or regions of interest ||
+|| -  [Export LAS Export LAS File(s)] || Export LiDAR returns by return number, number of returns, classes, elevation, intensity, and scan angle ||
+|| -  [AssignRGB Assign RGB Channel Data] || Assigns RGB channel data from multi-band images, elevation color, or vegetation height color, to LAS 1.2 files ||
+|| -  [FlightLines Extract Flight Lines] || Extract flight lines from LAS file(s) using GPS time information ||
 || [HeightFiltering Perform Height Filtering] || Performs vegetation filtering on the data ||
-|| [RasterizeLAS Rasterize Lidar Data] || Converts raw point data into various raster products||
-|| [BoundaryLAS Create Boundary EVF/SHP/KML] || Creates an vector file (EVF, shape or KML) that shows the boundaries of the data ||
+|| [BareDEM Create Bare-earth DEM] || Creates bare-earth digital terrain model from height-filtered LAS file(s) ||
+|| Create Raster Products || Create various topographic, intensity and vegetation raster products ||
+|| -  [TopoBare Create Topographic Products (Bare-earth)] || Creates various raster topographic bare-earth products ||
+|| -  [TopoAll Create Topographic Products (All returns)] || Creates various raster topographic products from all point data||
+|| -  [VegProducts Create Vegetation Products] || Creates various raster vegetation products  ||
+|| -  [IntensityProducts Create Intensity Products] || Creates various raster intensity products  ||
+|| -  [PrepareLAS Prepare LAS file(s)] || Add vegetation height information to the LAS file(s) from existing bare-earth digital terrain model ||
+|| [RasterizeLAS Rasterize Lidar Data (Legacy)] || Converts raw point data into various raster products||
+|| [HeightGroups Create Vegetation Height Groups] || Separate input LAS file into user-specified vegetation height groups ||
 || [ProfileLAS Create Elevation Profile(s)] || Creates one or more elevation profiles along a user-defined transect ||
-|| [ExportLAS Export Ground Points Only (LAS)] || Exports ground points only (classification = 2) as a new LAS file ||
 || [3DViewer 3D Lidar Viewer] || An interactive viewer for displaying lidar point data ||
