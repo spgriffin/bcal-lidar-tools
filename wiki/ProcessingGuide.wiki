@@ -29,5 +29,7 @@ If you are interested in calculating the heights of vegetation in your data or d
 
 Use the [RasterizeLAS raster tool] to create various raster products from your data. Remember that the raster products related to vegetation and/or bare ground cannot be created unless the data have been filtered first.
 
+
 =Data Processing Workflow=
+
 [http://bcal-lidar-tools.googlecode.com/svn/wiki/images/LiDARWorkflow.jpg]
