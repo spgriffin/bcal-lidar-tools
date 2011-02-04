@@ -25,8 +25,8 @@ This tool is meant to convert LiDAR point data into various raster topographic b
     * *Bare Earth Slope* - The average slope of all points within each pixel in degrees
     * *Bare Earth Aspect* - The aspect of the average slope of all points within each pixel in degrees from North.
     * *Bare Topographic Solar Radiation Index (TRASP)*: Transformation of Aspect (TRASP), used by Roberts and Cooper (1989), is defined as (1 - cosine(aspect - 30))/2. TRASP assigns the lowest value to coolest and wettest north-northeastern aspect, and the highest to the hotter, dryer south-southwesterly slopes.
-    * *Bare Slope Cosine Aspect (Slpcosasp)* - Slpcosasp is calculated as [slope * cosine(aspect)] (Stage, 1976). This is based on [http://arcscripts.esri.com/details.asp?dbid=11866 slope - aspect transformation script] by Jeffrey Evans. 
-    * *Bare Slope Sine Aspect (Slpsinasp)* - Slpsinasp is calculated as [slope * sine(aspect)] (Stage, 1976). This is based on [http://arcscripts.esri.com/details.asp?dbid=11866 slope - aspect transformation script] by Jeffrey Evans. 
+    * *Bare Slope Cosine Aspect (Slpcosasp)* - Slpcosasp is calculated as slope * cosine(aspect) (Stage, 1976). This is based on [http://arcscripts.esri.com/details.asp?dbid=11866 slope - aspect transformation script] by Jeffrey Evans. 
+    * *Bare Slope Sine Aspect (Slpsinasp)* - Slpsinasp is calculated as slope * sine(aspect) (Stage, 1976). This is based on [http://arcscripts.esri.com/details.asp?dbid=11866 slope - aspect transformation script] by Jeffrey Evans. 
     * *Ground Point Density* - The density of ground points within each pixel
   * Click "OK"
   * Select the output file, or save to memory. (If multiple files are selected and the "Mosaic multiple files?" box is unchecked, the user will be prompted for an output directory instead.)
