@@ -17,7 +17,7 @@
 || -  [SubsetLAS Subset LAS File(s)] || Subset LAS files by coordinates or image/ROI ||
 || - -  [SubsetLASCoord Subset via Coordinates] || Subsets data files according to user coordinates ||
 || - -  [SubsetLASRoi Subset via Image/ROI] || Subsets data files using a reference image and/or regions of interest ||
-|| -  [Export LAS Export LAS File(s)] || Export LiDAR returns by return number, number of returns, classes, elevation, intensity, and scan angle ||
+|| -  [ExportLAS Export LAS File(s)] || Export LiDAR returns by return number, number of returns, classes, elevation, intensity, and scan angle ||
 || -  [AssignRGB Assign RGB Channel Data] || Assigns RGB channel data from multi-band images, elevation color, or vegetation height color, to LAS 1.2 files ||
 || -  [FlightLines Extract Flight Lines] || Extract flight lines from LAS file(s) using GPS time information ||
 || [HeightFiltering Perform Height Filtering] || Performs vegetation filtering on the data ||
