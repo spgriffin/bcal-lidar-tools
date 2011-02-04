@@ -1,5 +1,5 @@
 #summary Instructions for installing the software.
-#labels Phase-Deploy
+#labels Phase-Deploy,Featured
 
 =Installation Instructions=
   # You will need ENVI 4.x or above pre-installed in your computer. These tools have not been tested for other versions of ENVI.
