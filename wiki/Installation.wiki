@@ -7,4 +7,4 @@
   # Start ENVI
   # BCAL LiDAR tools will be located under a new "BCAL LiDAR" button in the ENVI display between the "Topographic" and "Radar" menus
 
-[http://bcal.geology.isu.edu/envitoolsdocs/images/MenuBarScreen.jpg]
+[http://bcal-lidar-tools.googlecode.com/svn/wiki/images/MenuBarScreen.jpg]
