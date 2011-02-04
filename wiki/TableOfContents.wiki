@@ -1,7 +1,7 @@
-#summary BCAL LiDAR Tools version 1.0.0
+#summary BCAL LiDAR Tools version 1.1.x
 
   * [Installation Installation Instruction]
-  * [DevelopersGuide Developers Guide]
+  * [DevelopersGuide Developers' Guide]
   * [ProcessingGuide LiDAR Processing Guide]
   * [ToolsOverview Tools Overview]
   * [ToolsUsage Publications]
@@ -25,6 +25,14 @@
       * [AssignRGB  Assign RGB (LAS 1.2)]
       * [FlightLines  Extract Flight Lines]
     * [HeightFiltering Perform Height Filtering]
-    * [RasterizeLAS Rasterize Lidar Data]
+    * [BareDEM Create Bare-earth DEM]
+    * Raster Products
+      * [TopoAll  Topographic Products (Bare)]    
+      * [TopoBare  Topographic Products (All)]    
+      * [VegProducts  Vegetation Products]
+      * [IntensityProducts  Intensity Products]    
+      * [PrepareLAS  Prepare LAS file(s)]    
+    * [RasterizeLAS Rasterize Lidar Data (Legacy)]
+    * [HeightGroups Create Vegetation Height Groups]
     * [ProfileLAS  Create Elevation Profile(s)]
     * [3DViewer 3D LiDAR Viewer]
