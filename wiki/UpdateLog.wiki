@@ -1,8 +1,17 @@
 #summary Update Log
 
 = Update Log =
-
-  * 04/31/2010 - Added Help, ability to [ExportLAS export boundary as KML/Shapefiles], ability to work alongside ITTVis Lidar Tools, and several other bug fixes
+  * 02/02/2011: 
+    * Added new tool to:
+      * [LASDataInfo quickly view LAS data summary]
+      * [ExportLAS export LAS files] by return numbers, classes, elevation, height, scan angle
+      * [AssignRGB assign RGB colors] to LAS file from multispectral images
+      * [FlightLines extract flight lines] from GPS time information
+      * [HeightGroups create vegetation height groups]
+      * [PrepareLAS compute vegetation height] from existing DEM
+      * create different raster value-added products: topographic ([TopoAll all returns]/[TopoBare bare-earth returns]), [IntensityProducts intensity], and [VegProducts vegetation].
+    * Also added more fields for [BoundaryLAS KML display], options to [DecimateLAS decimate by percent], added threshold measure for [HeightFiltering height filtering]
+  * 04/31/2010 - Added Help, ability to [BoundaryLAS export boundary as KML/Shapefiles], ability to work alongside ITTVis Lidar Tools, and several other bug fixes
   * 04/16/2010 - Added [LAStoAscii LAS to Ascii conversion tool], [ExportLAS export ground points tool], made minor bug fixes
   * 10/09/2007 - Added the [ProcessingGuide processing guide] to website
   * 07/19/2007 - Added [LASFileInfo file information tool], support for embedded projections, made minor tweaks and fixes
