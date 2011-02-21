@@ -6,6 +6,7 @@
   # [http://code.google.com/p/bcal-lidar-tools/downloads/list Download] the Lidar Tools Zip file. Unzip the file in the "save_add" folder of your ENVI installation. On my computer, this folder is located at: "C:\Program Files\ITT\IDL71\products\enviXX\save_add\"
   # Start ENVI
   # BCAL LiDAR tools will be located under a new "BCAL LiDAR" button in the ENVI display between the "Topographic" and "Radar" menus
-  # The tools have been tested to work for ENVI 4.7 and 4.8. If it is not working for your version of ENVI, the best option would be to [http://code.google.com/p/bcal-lidar-tools/source download the source codes], and recompile the program in your machine.
+
+Note: The tools have been tested to work for ENVI 4.7 and 4.8. If it is not working for your version of ENVI, the best option would be to [http://code.google.com/p/bcal-lidar-tools/source download the source codes], and recompile the program in your machine.
 
 [http://bcal-lidar-tools.googlecode.com/svn/wiki/images/MenuBarScreen.jpg]
