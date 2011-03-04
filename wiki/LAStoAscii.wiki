@@ -1,16 +1,18 @@
 #summary Convert LAS Data to Ascii
 
-=Using "Convert LAS Data to Ascii"=
+=Using "Convert LAS Data to Ascii/Shapefile"=
 
-This tool is meant to convert one or more LAS format data files to text (ascii) file format.
+This tool is meant to convert one or more LAS format data files to text (ascii) and/or ESRI shapefile (PointZ).
 
 ==Usage:==
 
   * Select the input LAS file(s) to convert.
-  * Select the text file delimiter (comma, semicolon, or tab).
-  * Select the fields from the LAS format lidar data to be included in the output text file ('X Y Z', 'Time X Y Z Intensity', or 'All available fields’)
-  * If the “Include header row?” box is checked, then the first row of the output text file will contain field names separated by the chosen delimiter.
-  * Select the output directory. The output file(s) will be saved in the new directory with the same name as the input files. The LAS file extension will be changed to TXT.
+  * Select the fields from the LAS format lidar data to be included in the output file ('X Y Z', 'Time X Y Z Intensity', or 'All available fields’)
+  * Select output type ('Ascii', and/or 'Shapefile')
+  * If you selected 'Ascii' output options: 
+    * Select the text file delimiter (comma, semicolon, or tab).
+    * If the “Include header row?” box is checked, then the first row of the output text file will contain field names separated by the chosen delimiter.
+  * Select the output directory. The output file(s) will be saved in the new directory with the same name as the input files. 
 
 ==Notes:==
 
@@ -19,4 +21,4 @@ This tool is meant to convert one or more LAS format data files to text (ascii) 
   * For more information on this tool, please refer to:
     * Ehinger, S. 2010. [http://bcal.geology.isu.edu/docs/Ehinger_thesis_0629_Final.pdf Design, development, and application of LiDAR data processing tools]. Masters Thesis. Idaho State University, Department of Geosciences.
 
-[http://bcal.geology.isu.edu/envihelp/images/LASScreen.jpg]
+[http://bcal-lidar-tools.googlecode.com/svn/wiki/images/LASScreen.jpg]
