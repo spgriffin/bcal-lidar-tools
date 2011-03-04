@@ -1,7 +1,13 @@
 #summary Update Log
 
 = Update Log =
-  * 02/02/2011: 
+
+  * ver 1.2.0 (3/4/2011)
+    * Added ability to [LAStoAscii convert LAS files] into ESRI PointZ Shapefiles
+    * Added 'check update' help menu
+  * ver 1.1.1 (3/2/2011)
+    * Fixed bug related [ReprojectLAS reprojecting] already projected LAS files
+  * ver 1.1.0 (02/02/2011) 
     * Added new tool to:
       * [LASDataInfo quickly view LAS data summary]
       * [ExportLAS export LAS files] by return numbers, classes, elevation, height, scan angle
@@ -11,7 +17,7 @@
       * [PrepareLAS compute vegetation height] from existing DEM
       * create different raster value-added products: topographic ([TopoAll all returns]/[TopoBare bare-earth returns]), [IntensityProducts intensity], and [VegProducts vegetation].
     * Also added more fields for [BoundaryLAS KML display], options to [DecimateLAS decimate by percent], added threshold measure for [HeightFiltering height filtering]
-  * 04/31/2010 - Added Help, ability to [BoundaryLAS export boundary as KML/Shapefiles], ability to work alongside ITTVis Lidar Tools, and several other bug fixes
+  * ver 1.0.0 (04/31/2010) - Added Help, ability to [BoundaryLAS export boundary as KML/Shapefiles], ability to work alongside ITTVis Lidar Tools, and several other bug fixes
   * 04/16/2010 - Added [LAStoAscii LAS to Ascii conversion tool], [ExportLAS export ground points tool], made minor bug fixes
   * 10/09/2007 - Added the [ProcessingGuide processing guide] to website
   * 07/19/2007 - Added [LASFileInfo file information tool], support for embedded projections, made minor tweaks and fixes
