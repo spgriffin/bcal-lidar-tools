@@ -1,4 +1,4 @@
-#summary Convert LAS Data to Ascii
+#summary Convert LAS Data to Ascii/Shapefile
 
 =Using "Convert LAS Data to Ascii/Shapefile"=
 
