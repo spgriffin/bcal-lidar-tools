@@ -13,7 +13,7 @@
       * [AddProject Add Projection]
       * [ReprojectLAS Reproject LAS]
       * [AsciiToLAS Convert Ascii to LAS]
-      * [LAStoAscii Convert LAS to Ascii]
+      * [LAStoAscii Convert LAS to Ascii/Shapefile]
       * [BoundaryLAS  Create Boundary EVF/SHP/KML]
       * [BufferLAS Buffer LAS Files]
       * [TileLAS Tile LAS Files]
