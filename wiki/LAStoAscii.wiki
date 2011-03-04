@@ -9,7 +9,7 @@ This tool is meant to convert one or more LAS format data files to text (ascii) 
   * Select the input LAS file(s) to convert.
   * Select the fields from the LAS format lidar data to be included in the output file ('X Y Z', 'Time X Y Z Intensity', or 'All available fields’)
   * Select output type ('Ascii', and/or 'Shapefile')
-  * If you selected 'Ascii' output options: 
+  * If you selected 'Ascii' output option: 
     * Select the text file delimiter (comma, semicolon, or tab).
     * If the “Include header row?” box is checked, then the first row of the output text file will contain field names separated by the chosen delimiter.
   * Select the output directory. The output file(s) will be saved in the new directory with the same name as the input files. 
